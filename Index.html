@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="script/form.js"></script>
+    <script type="text/javascript" src="script/data.js"></script>
+    <script type="text/javascript" src="script/personalProfileValid.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body onload="init()">
+    <section>
+        <div>
+            <label for="variable">Вид страхования</label>
+            <select id="typeSaved">
+                <option>КАСКО</option>
+                <option>ОСАГО</option>
+                <option>ДАГО</option>
+            </select>
+        </div>
+        <div>
+            <label for="Number">Номер полиса</label>
+            <input id="number" pattern="^[0][0-4][0-9][aA][tT][-][0-2][0-9][/][0-9]{6}$" />
+        </div>
+        <div>
+            <label for="SavedPersone">Страхователь</label>
+            <input id="savedPersone" />
+        </div>
+        <div>
+            <label for="DateSell">Дата продажи</label>
+            <input id="dateSell" type="date">
+        </div>
+        <div>
+            <label for="SavedPrize">Страховая премия</label>
+            <input id="savedPrize" pattern="^[ 0-9]+$" />
+        </div>
+        <div>
+            <label for="Sale">Скидка</label>
+            <input id="sale" pattern="^[ 0-9]+$" />
+        </div>
+        <button id="save">Сохранить</button>
+        <button id="clear">Clear</button>
+        <button id="removeRow">Row--</button>
+        <div id='table'>Зарегистрировынные полисы:</div>
+        <tbody></tbody>
+    </section>
+</body>
+
+</html>
